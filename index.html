@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <form id="feedback-form">
+      <label for="username">Name:</label>
+      <input type="text" id="username" name="username" title="Enter your full name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" title="Enter a valid email address" />
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4" title="Share your thoughts"></textarea>
+      <div id="char-count">0 characters</div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="feedback-display">
+      <h3>Feedback Entries:</h3>
+    </div>
+  </div>
+
+  <script src="cp_1.js"></script>
+</body>
+</html>
