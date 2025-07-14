@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +8,28 @@
 </head>
 <body>
   <div class="form-container">
-    <form id="feedback-form">
-      <label for="username">Name:</label>
-      <input type="text" id="username" name="username" title="Enter your full name" />
+    <h1>Feedback Form</h1>
+    <form id="feedback-form" novalidate>
+      <div class="field-group">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" title="Enter your full name" required aria-describedby="username-hint" />
+        <small id="username-hint" class="field-hint">Please enter your full name</small>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" title="Enter a valid email address" />
+      <div class="field-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" title="Enter a valid email address" required aria-describedby="email-hint" />
+        <small id="email-hint" class="field-hint">We'll use this to contact you if needed</small>
+      </div>
 
-      <label for="comments">Comments:</label>
-      <textarea id="comments" name="comments" rows="4" title="Share your thoughts"></textarea>
-      <div id="char-count">0 characters</div>
+      <div class="field-group">
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" title="Share your thoughts" required aria-describedby="comments-hint"></textarea>
+        <small id="comments-hint" class="field-hint">Share your feedback, suggestions, or concerns</small>
+        <div id="char-count">0 characters</div>
+      </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Submit Feedback</button>
     </form>
 
     <div id="feedback-display">
